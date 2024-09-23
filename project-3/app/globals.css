@@ -9,8 +9,7 @@
   --font-heading: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html,
-body {
+html, body {
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -27,7 +26,7 @@ body {
 
 /* Add Post Link */
 a {
-  color: var(--accent-color);
+  color: white;
   font-weight: bold;
   padding: 12px 24px;
   background-color: var(--highlight-color);
@@ -35,10 +34,11 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
 }
 
 a:hover {
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -61,41 +61,8 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: 4rem;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
-  background-blend-mode: multiply;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.main:hover {
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-}
-
-/* Button styling */
-.button {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.button:hover {
-  background-color: var(--highlight-color);
-  color: var(--foreground-color);
-  transform: translateY(-2px);
-}
-
-.button:active {
-  background-color: var(--accent-color);
-  transform: translateY(0);
 }
 
 .grid {
@@ -110,68 +77,53 @@ p {
   transition: box-shadow 0.3s ease;
 }
 
-.grid:hover {
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-  }
-}
-
-/* Form styling */
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 700px;
-  background-color: #fff;
-  padding: 30px;
+/* Card styling to match Add Task */
+.card {
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
+  max-width: 600px;
+  text-align: left;
   margin-bottom: 20px;
 }
 
-.label {
-  color: var(--secondary-color);
-  display: block;
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  font-family: var(--font-main);
-}
-
-.input,
-.textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid var(--background-color);
-  background-color: #f9fafb;
+.card h3 {
+  font-size: 1.25rem;
   color: var(--foreground-color);
-  transition: border-color 0.2s ease;
+  margin-bottom: 10px;
 }
 
-.input:focus,
-.textarea:focus {
-  border-color: var(--highlight-color);
-  outline: none;
+.card h4 {
+  font-size: 1.15rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
 }
 
-.textarea {
-  height: 150px;
-  resize: vertical;
+.card p {
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  background-color: var(--highlight-color);
+  transform: translateY(0);
 }

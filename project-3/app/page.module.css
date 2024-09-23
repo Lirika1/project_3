@@ -8,9 +8,9 @@
 }
 
 .description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
+  display: flex; /* Changed to flex for better alignment */
+  justify-content: center; /* Centering content */
+  align-items: center; /* Centering content */
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
@@ -23,6 +23,13 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  text-decoration: none; /* Ensuring links are not underlined */
+  color: var(--highlight-color); /* Added color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.description a:hover {
+  color: var(--primary-color); /* Change color on hover */
 }
 
 .description p {
@@ -44,6 +51,7 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
+  gap: 1rem; /* Added gap for spacing */
 }
 
 .card {
@@ -52,6 +60,7 @@
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
 }
 
 .card span {
@@ -107,7 +116,7 @@
 .logo {
   position: relative;
 }
-/* Enable hover only on non-touch devices */
+
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);
@@ -226,4 +235,27 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.button {
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  background-color: var(--highlight-color);
+  transform: translateY(0);
 }
